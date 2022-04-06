@@ -15,5 +15,12 @@
   <%= @user.microposts.first.content %>
 </p>
 
+<p>
+  <% @user.microposts.each do |micropost|%>
+    <strong>Micropost:</strong>
+    <%= micropost.content %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
