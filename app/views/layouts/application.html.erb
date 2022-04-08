@@ -2,15 +2,40 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%# <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <%# <%= csp_meta_tag %> 
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %> 
+
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+
+
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>  
+    <%# <header class="navbar navbar-fixed-top navbar-inverse"> %>
+     <div class="container">
+       <%# <%= link_to "sample app" , '#' , id: "logo" %>
+       <%# <nav>
+         <ul class="nav navbar-nav navbar-right"> %>
+           <%# <li><%= link_to "Home",   '#' %></li>
+           <%# <li><%= link_to "help",   '#' %></li>
+           <%# <li><%= link_to "log in",   '#' %></li> 
+         <%# </ul>  
+       </nav> %>
+     <%# </div> 
+    </header> %>
+    <%# <div class="container">     %> 
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>  
   </body>
 </html>
