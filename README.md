@@ -38,8 +38,8 @@ $ rails server
 ```
 
 詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-<<<<<<< HEAD
 を参考にしてください。
-=======
-を参考にしてください。
->>>>>>> cb8e82c00fe7c1fc50685349c3da6e4bc11d1a0a
+
+
+- Add User step
+User.create(name: "Michael Hartl", email: "mhartl@example.com",password: "foobar", password_confirmation: "foobar")

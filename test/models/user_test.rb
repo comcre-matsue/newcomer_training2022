@@ -32,11 +32,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should accept valid addresses" do
-<<<<<<< HEAD
     valid_addresses = %W[user@example.com User@foo.COM A_US-ER@foo.bar.org 
-=======
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
->>>>>>> cb8e82c00fe7c1fc50685349c3da6e4bc11d1a0a
                          first.last@foo.jp alice+bob@baz.cn]
     valid_addresses.each do |valid_address|
       @user.email = valid_address
@@ -46,11 +42,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "email validation should reject invalid addresses" do
     invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-<<<<<<< HEAD
                            foo@bar_baz.com foo@bar+baz.com foo@bar..com]
-=======
-                           foo@bar_baz.com foo@bar+baz.com]
->>>>>>> cb8e82c00fe7c1fc50685349c3da6e4bc11d1a0a
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
       assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
@@ -58,7 +50,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email addresses should be unique" do
-<<<<<<< HEAD
     duplicate_user = @user.dup 
     duplicate_user.email = @user.email.upcase
     @user.save 
@@ -72,14 +63,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
 
-=======
-    duplicate_user = @user.dup
-    duplicate_user.email = @user.email.upcase
-    @user.save
-    assert_not duplicate_user.valid?
-  end
-
->>>>>>> cb8e82c00fe7c1fc50685349c3da6e4bc11d1a0a
   test "password should be present (nonblank)" do
     @user.password = @user.password_confirmation = " " * 6
     assert_not @user.valid?
@@ -89,8 +72,4 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
-<<<<<<< HEAD
-
-=======
->>>>>>> cb8e82c00fe7c1fc50685349c3da6e4bc11d1a0a
 end
