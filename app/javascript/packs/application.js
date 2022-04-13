@@ -11,7 +11,13 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-require('jquery')
-import 'bootstrap'
-// import '../src/application.scss'
-console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+require("jquery")
+import "bootstrap"
+
+
+// require("@rails/ujs").start()
+// require("turbolinks").start()
+// require("@rails/activestorage").start()
+// require("channels")
+// require("jquery")
+// import "bootstrap"
