@@ -23,12 +23,15 @@
     <%= render 'layouts/header' %>  
     <%# <header class="navbar navbar-fixed-top navbar-inverse"> %>
      <div class="container">
+       <% flash.each do |message_type, message| %>
+         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+       <% end %>
        <%# <%= link_to "sample app" , '#' , id: "logo" %>
        <%# <nav>
          <ul class="nav navbar-nav navbar-right"> %>
-           <%# <li><%= link_to "Home",   '#' %></li>
-           <%# <li><%= link_to "help",   '#' %></li>
-           <%# <li><%= link_to "log in",   '#' %></li> 
+           <%# <li><%= link_to "Home",   '#'</li> %>
+           <%# <li><%= link_to "help",   '#'</li> %>
+           <%# <li><%= link_to "log in",   '#'</li>  %>
          <%# </ul>  
        </nav> %>
      <%# </div> 
