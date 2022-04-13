@@ -12,7 +12,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_not flash.empty?
     get root_path
     assert flash.empty?
-    delete logout_path
     assert_not is_logged_in?
     assert_redirected_to root_url
     follow_redirect!
