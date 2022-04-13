@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'minitest-reporters'
 gem 'guard'
+
+gem 'jquery-rails'
