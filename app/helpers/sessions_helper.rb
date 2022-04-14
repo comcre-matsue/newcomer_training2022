@@ -17,6 +17,7 @@ module SessionsHelper
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
+      # raise 
       user = User.find_by(id: user_id)
       if user && user.authenticated?(cookies[:remember_token])
         log_in user
@@ -43,4 +44,5 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
 end
