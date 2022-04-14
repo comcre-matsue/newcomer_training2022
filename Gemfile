@@ -17,6 +17,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootstrap-sass'
 gem 'rails-controller-testing'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
