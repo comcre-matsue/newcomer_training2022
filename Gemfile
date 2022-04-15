@@ -20,12 +20,18 @@ gem 'rails-controller-testing'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'carrierwave'
+gem 'mini_magick'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
+group :production do
+  gem 'fog'
+  end
 
 group :development do
   gem 'web-console', '>= 4.1.0'
