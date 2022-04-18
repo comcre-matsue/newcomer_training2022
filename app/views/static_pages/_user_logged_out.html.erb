@@ -1,0 +1,12 @@
+<div class="center jumbotron">
+  <h1><%= t('static_pages.home.Welcome_to_the_Sample_App') %></h1>
+ 
+  <h2>
+    <%= t('static_pages.home.welcome_message_html') %>
+  </h2>
+ 
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+ </div>
+ 
+<%= link_to image_tag("rails.png", alt: "Rails logo"),
+              'http://rubyonrails.org/' %>
