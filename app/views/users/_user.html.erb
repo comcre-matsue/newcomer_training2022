@@ -1,0 +1,16 @@
+ <% @users.each do |user| %>   
+
+<li>
+  <%= gravatar_for user, size: 50 %>
+  <%= link_to user.name, user %>
+  <!--if式　current_userが管理者　かつ　（削除対象の）userがcurrent_userではない-->
+    <!--ここで言うuserはパーシャルの呼び出し元index.html.erbでeach文で取り出したuser変数の事-->
+    <!--管理者が自分自身を削除できないようになっている-->
+    <% if current_user.admin? && !current_user?(user) %>
+    <!--削除ボタン-->
+    | <%= link_to t('.delete'), user, method: :delete,
+                                  data: { confirm: t('.confirmation') } %>
+  <% end %>
+</li>
+
+<% end %>
