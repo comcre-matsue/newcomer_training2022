@@ -1,3 +1,4 @@
+require File.expand_path('../boot', __FILE__)
 require_relative "boot"
 
 require "rails/all"
@@ -6,7 +7,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module App2022
+module SampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
@@ -18,5 +19,6 @@ module App2022
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
