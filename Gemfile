@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap-sass'
 gem 'rails-controller-testing'
 gem 'faker'
+gem 'carrierwave'             
+gem 'mini_magick'         
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'carrierwave'
@@ -50,3 +52,7 @@ gem 'minitest-reporters'
 gem 'guard'
 
 gem 'jquery-rails'
+
+group :production do
+  gem 'fog'
+  end
